@@ -23,7 +23,7 @@ func NewStack(size int) *Stack {
 // Push adds an element to stack
 func (s *Stack) Push(val int) {
 	if s.top == s.size-1 {
-		panic("stack is full")
+		panic("stack is full.")
 	}
 	s.arr = append(s.arr, val)
 	s.top++
