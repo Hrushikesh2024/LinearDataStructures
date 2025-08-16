@@ -21,13 +21,12 @@ func NewStack(size int) *Stack {
 }
 
 // Push adds an element to stack
-func (s *Stack) Push(val int) error {
+func (s *Stack) Push(val int) {
 	if s.top == s.size-1 {
-		return errors.New("stack is full")
+		panic("stack is full")
 	}
 	s.arr = append(s.arr, val)
 	s.top++
-	return nil
 }
 
 // Pop removes and returns the top element
